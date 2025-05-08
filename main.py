@@ -22,7 +22,7 @@ import pickle
 
 try:
     # Replace this with your actual Google Drive direct download URL
-    url = "https://drive.google.com/file/d/1P8HSnIzFL5B3JH9J4r-XoCchTl_jQ7LQ/view?usp=sharing"
+    url = "https://drive.google.com/file/d/1T1Hfcuacl4zq1fdEp-aF-8czDCT_F2f6/view?usp=sharing"
     
     response = requests.get(url)
     response.raise_for_status()  # Raise an error for bad status codes
