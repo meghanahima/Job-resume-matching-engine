@@ -1,0 +1,36 @@
+{
+    "resume_id": "resume_009",
+    "resume_text": "Summary\nExperienced software engineer with 3+ years in backend development.\nEducation\nB.Tech in Computer Science from GVP College\nSkills\nPython, FastAPI, MongoDB\nExperience\nBackend Developer at ABC Corp, built scalable APIs.",
+    "candidate_skills": [
+      {"skill": "linux/unix"},
+      {"skill": "network monitoring"},
+      {"skill": "MongoDB"}
+    ],
+    "candidate_employment_history": [
+      {
+        "jobTitle": "Backend Developer",
+        "company": "ABC Corp",
+        "city": "Hyderabad",
+        "startDate": "01/2021",
+        "endDate": "01/2024",
+        "description": "Built REST APIs using FastAPI and managed MongoDB clusters.",
+        "presentWorking": false
+      },
+      {
+        "jobTitle": "frontend Developer",
+        "company": "ABC Corp",
+        "city": "Hyderabad",
+        "startDate": "01/2021",
+        "endDate": "01/2024",
+        "description": "Built REST APIs using FastAPI and managed MongoDB clusters.",
+        "presentWorking": false
+      }
+    ],
+    "candidate_education": [
+      {
+        "degree": "B.Tech",
+        "institution": "GVP College",
+        "year": "2023"
+      }
+    ]
+}
