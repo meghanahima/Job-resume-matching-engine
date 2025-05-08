@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: ats-resume-matcher
+    runtime: python
+    region: oregon  # or choose closest region
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn main:app --host 0.0.0.0 --port 10000
+    envVars:
+      - key: REDIS_HOST
+        value: leading-mule-12204.upstash.io
+      - key: REDIS_PORT
+        value: "6379"
+      - key: REDIS_PASSWORD
+        value: AS-sAAIjcDFhN2YyNjYyOWEwY2Y0NDM2YWY5ZmFiYmFhOWQzYjFlNHAxMA
+      - key: DB_CONN_STRING
+        value: mongodb+srv://meghanasiddi20:kaSUCI05Rj5UOq7u@cluster0.z6z4k.mongodb.net/
+      - key: DB_NAME
+        value: test
+      - key: DB_COLLECTION_NAME
+        value: cleaned_jobs
