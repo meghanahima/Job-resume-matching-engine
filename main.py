@@ -17,24 +17,14 @@ load_dotenv()
 
 app = FastAPI(title="ATS Score Prediction API")
 
-import requests
-import pickle
-
+# Load model
 try:
-    # Replace this with your actual Google Drive direct download URL
-    url = "https://drive.google.com/file/d/1T1Hfcuacl4zq1fdEp-aF-8czDCT_F2f6/view?usp=sharing"
-    
-    response = requests.get(url)
-    response.raise_for_status()  # Raise an error for bad status codes
-
-    # Deserialize the downloaded binary content
-    model_data = pickle.loads(response.content)
-    xgb_model = model_data['xgb_model']
-    sentence_model = model_data['sentence_model']
-
+    with open('xgBoostRegressor.pkl', 'rb') as f:
+        model_data = pickle.load(f)
+        xgb_model = model_data['xgb_model']
+        sentence_model = model_data['sentence_model']
 except Exception as e:
-    raise RuntimeError(f"Failed to load model: {e}")
-
+    raise
 
 # MongoDB client
 mongo_client = MongoClient(os.getenv("DB_CONN_STRING"))
